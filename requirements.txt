@@ -1,0 +1,4 @@
+numpy
+ufl
+mpi4py
+petsc4py
