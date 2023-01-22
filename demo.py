@@ -7,8 +7,8 @@ import os
 from mpi4py import MPI
 from petsc4py.PETSc import ScalarType
 
-os.system('/usr/bin/Xvfb :0 -screen 0 1024x768x24 &')
-os.environ['DISPLAY'] = ':0'
+os.system('/usr/bin/Xvfb :99 -screen 0 1024x768x24 &')
+os.environ['DISPLAY'] = ':99'
 
 msh = mesh.create_rectangle(comm=MPI.COMM_WORLD,
                             points=((0.0, 0.0), (2.0, 1.0)), n=(32, 16),
